@@ -27,32 +27,32 @@
                     <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Nome do aluno</th>
-                            <th>Nome do livro</th>
-                            <th>data_emprestimo</th>
-                            <th>data_prevista_devolucao</th>
-                            <th>data_devolucao</th>
-                            <th>status</th>
+                            <th>Nome do Aluno</th>
+                            <th>Título do Livro</th>
+                            <th>Data de Emprestimo</th>
+                            <th>Data Prevista Devolucao</th>
+                            <th>Data Devolução</th>
+                            <th>Status</th>
                         </tr>
                     </thead>
                     <tbody>
-                    {% for a in emprestimos %}
+                    {% for e in emprestimos %}
                         <tr>
-                            <td>{{ a.id }}</td>
-                            <td><a href="#">{{ a.nome.upper }}</a></td>
-                            <td>{{ a.nome }}</td>
-                            <td>{{ a.data_emprestimo }}</td>
-                            <td>{{ a.data_prevista_devolucao }}</td>
-                            <td>{{ a.data_devolucao  | date:'d/m/Y'}}</td>
-                            <td>{{ a.status }}</td>
+                            <td>{{ e.id }}</td>
+                            <td><a href="#">{{ e.aluno_id }}</a></td>
+                            <td>{{ e.livro_id }}</td>
+                            <td>{{ e.data_emprestimo | date:'d/m/Y'}}</td>
+                            <td>{{ e.data_prevista_devolucao | date:'d/m/Y'}}</td>
+                            <td>{{ e.data_devolucao  | date:'d/m/Y'}}</td>
+                            <td>{{ e.get_status_display }}</td>
                             <td>
                                 <a href="#">
                                     <i class="fa fa-search" aria-hidden="true" style="color: blue;"></i>
                                 </a>
-                                <a href="{% url 'emprestimos:editar_emprestimo' a.id %}">
+                                <a href="{#% url 'emprestimos:editar_emprestimo' a.id %}">
                                     <i class="fa fa-pencil-square" aria-hidden="true" style="color: #6B8E23;"></i>
                                 </a>
-                                <a href="{% url 'emprestimos:excluir_emprestimo' a.id %}">
+                                <a href="{#% url 'emprestimos:excluir_emprestimo' a.id %}">
                                     <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>
                                 </a>
                             </td>

@@ -44,24 +44,19 @@
                 <div class="container">
                     <div class="p-1 mb-2 bg-light text-dark">
                         <div class="form-row">
-                            <div class="col-md-2">
-                                {{ form.data_emprestimo.errors }}
-                                <label><strong>data_emprestimo:</strong></label>
-                                {{ form.data_emprestimo|add_class:'form-control' }}
-                            </div>
-                            <div class="col-md-4 mb-0">
+                            <div class="col-md-5 mb-0">
                                 {{ form.data_prevista_devolucao.errors }}
-                                <label><strong>data_prevista_devolucao:</strong></label>
+                                <label><strong>Data Prevista da Devolução:</strong></label>
                                 {{ form.data_prevista_devolucao|add_class:'form-control'  }}
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 {{ form.data_devolucao.erros }}
-                                <label><strong>data_devolucao:</strong></label>
+                                <label><strong>Data de Devolução:</strong></label>
                                 {{ form.data_devolucao|add_class:'form-control' }}
                             </div>
                             <div class="col-md-3">
                                 {{ form.status.erros }}
-                                <label><strong>status:</strong></label>
+                                <label><strong>Status:</strong></label>
                                 {{ form.status|add_class:'form-control' }}
                             </div>
                         </div>
@@ -73,7 +68,7 @@
                         <div class="form-row">
                             <div class="col-md-12">
                                <button type="submit" class="btn btn-success">Salvar</button>
-                               <a href="{{request.META.HTTP_REFERER}}" class="btn btn-primary">Voltar</a>
+                               <a href="{% url 'emprestimos:listar_emprestimos'" class="btn btn-primary">Voltar</a>
                             </div>
                         </div>
                     </div>
