@@ -23,6 +23,7 @@ def listar_emprestimos(request):
     return render(request, template_name, context)
 
 
+
 def editar_emprestimo(request, id):
     template_name = 'emprestimos/form_emprestimo.html'
     emprestimo = get_object_or_404(Emprestimo, id=id)

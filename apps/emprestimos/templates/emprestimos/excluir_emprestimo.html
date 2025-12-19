@@ -18,12 +18,12 @@
     </div>
     <div class="card-body">
         <h5 class="card-title">Id: {{emprestimo.id}}</h5>
-        <h5 class="card-title">emprestimo: {{emprestimo.nome}}</h5>
-        <h5 class="card-title">Matrícula: {{emprestimo.matricula}}</h5>
-        <h5 class="card-title">Matrícula: {{emprestimo.matricula}}</h5>
-        <h5 class="card-title">Matrícula: {{emprestimo.email}}</h5>
-        <h5 class="card-title">Matrícula: {{emprestimo.telefone}}</h5>
-        <h5 class="card-title">Matrícula: {{emprestimo.data_evento}}</h5>
+        <h5 class="card-title">Nome: {{emprestimo.aluno_id}}</h5>
+        <h5 class="card-title">Título: {{emprestimo.livro_id}}</h5>
+        <h5 class="card-title">Data de Emprestimo: {{emprestimo.data_emprestimo}}</h5>
+        <h5 class="card-title">Data Prevista de Devolução: {{emprestimo.data_prevista_devolucao}}</h5>
+        <h5 class="card-title">Data de Devolução: {{emprestimo.data_devolucao}}</h5>
+        <h5 class="card-title">Status: {{emprestimo.get_status_display}}</h5>
 
         <form method="post">
              {% csrf_token %}
